@@ -2,7 +2,7 @@
 
     <section class="section contenedor">
         <h2>Registro de usuarios</h2>
-        <form id="registro" class="registro" action="" method="POST">
+        <form id="registro" class="registro" action="validar_registro.php" method="POST">
             <div id="datos_usuario" class="registro caja clearfix">
                 <div class="campo">
                     <label for="nombre">Nombre:</label>
@@ -36,7 +36,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dia">Boletos deseados:</label>
-                            <input type="number" min="0" max="pase_dia" id="pase_dia" size="3" placeholder="0">
+                            <input type="number" min="0" max="pase_dia" id="pase_dia" size="3" name="boletos[]" placeholder="0">
                         </div>
                       </div>
                     </li>
@@ -51,7 +51,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_completo">Boletos deseados:</label>
-                            <input type="number" min="0" max="pase_completo" id="pase_completo" size="3" placeholder="0">
+                            <input type="number" min="0" max="pase_completo" id="pase_completo" size="3" name="boletos[]" placeholder="0">
                         </div>
                       </div>
                     </li>
@@ -66,7 +66,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dos_dias">Boletos deseados:</label>
-                            <input type="number" min="0" max="pase_dos_dias" id="pase_dosdias" size="3" placeholder="0">
+                            <input type="number" min="0" max="pase_dos_dias" id="pase_dosdias" size="3" name="boletos[]" placeholder="0">
                         </div>
                       </div>
                     </li>
@@ -186,40 +186,4 @@
         </form>
     </section>
 
-
-
     <?php include_once 'includes/templates/footer.php'; ?>   
-
-
-
-
-
-
-
-
-
-<!--
-Texto "Sobre gdlwwebcamp": 
-Texto tweers: 
-
-Integer ultricies justo nec ipsum finibus, eu interdum quam vulputate. #Pellentesque nec justo non est eleifend pulvinar.
- Integer ultricies #justo nec ipsum finibus, eu interdum quam vulputate. Pellentesque nec justo non est eleifend pulvinar.
- Integer ultricies justo nec ipsum finibus, eu interdum quam vulputate. #Pellentesque nec @justo non est eleifend pulvinar.
---> 
-
-
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>

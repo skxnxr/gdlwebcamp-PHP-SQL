@@ -48,7 +48,7 @@
           </nav>
           <div class="informacion-evento">
             <div class="clearfix">
-                <p class="fecha"><i class="fas fa-calendar-alt"></i>01-03 May</p>
+                <p class="fecha"><i class="fas fa-calendar-alt"></i>01-03 Mayo</p>
                  <p class="ciudad"><i class="fas fa-map-marker-alt"></i>Caracas, VE</p>
             </div>
             

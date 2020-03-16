@@ -4,17 +4,7 @@
     let regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function(){
 
-        var map = L.map('mapa').setView([10.496262, -66.848937], 16);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([10.496262, -66.848937]).addTo(map)
-            .bindPopup('GDLWebCamp 2020<br> Boletos ya disponibles.')
-            .openPopup();
-            // .bindTooltip('Un Tooltip')
-            // .openTooltip()
+       
 
         //Datos usuarios
         let nombre = document.getElementById('nombre');
@@ -144,6 +134,18 @@
         
         }
 
+        //Código JS para el mapa 
+        var map = L.map('mapa').setView([10.496262, -66.848937], 16); 
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([10.496262, -66.848937]).addTo(map)
+            .bindPopup('GDLWebCamp 2020<br> Boletos ya disponibles.')
+            .openPopup();
+            // .bindTooltip('Un Tooltip')
+            // .openTooltip()
 
     }); //DOM CONTENT LOADED
 })();
@@ -209,7 +211,7 @@ $(function(){
 
     
     //Cuenta regresiva
-    $('.cuenta-regresiva').countdown('2020/04/10 09:00:00', function(event) {
+    $('.cuenta-regresiva').countdown('2020/05/01 09:00:00', function(event) {
         $('#dias').html(event.strftime('%D'));
         $('#horas').html(event.strftime('%H'));
         $('#minutos').html(event.strftime('%M'));
@@ -218,7 +220,7 @@ $(function(){
 
     //Colobox
     $('.invitado-info').colorbox({inline:true, width:"50%"});
-
+    $('.boton_newsletter').colorbox({inline:true, width:"50%"});
 
 
 });

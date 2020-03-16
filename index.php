@@ -204,7 +204,7 @@
       <div class="contenido contenedor">
         <p>Registrate al Newsletter:</p>
         <h3>Gdlwebcamp</h3>
-        <a href="#" class="boton transparent"> Registro</a>
+        <a href="#mc_embed_signup" class="boton_newsletter boton transparent"> Registro</a>
       </div>
     </div>
 
@@ -219,13 +219,5 @@
         </ul>
       </div>
     </section>
-
+    
     <?php include_once 'includes/templates/footer.php'; ?>
-
-
-
-
-
-
-
-
