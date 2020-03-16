@@ -73,47 +73,7 @@
       </div><!--Contenido-progrma-->
     </section><!--programa-->
 
-    <section class="invitados contenedor section">
-      <h2>Nuestros invitados</h2>
-      <ul class="lista-invitados clearfix">
-        <li>
-          <div class="invitado">
-            <img src="img/invitado1.jpg" alt="Imagen invitado">
-            <p>Rafael Bautista</p>
-          </div>
-        </li>
-        <li>
-          <div class="invitado">
-            <img src="img/invitado2.jpg" alt="Imagen invitado">
-            <p>Shari Herrera </p>
-          </div>
-        </li>
-        <li>
-          <div class="invitado">
-            <img src="img/invitado3.jpg" alt="Imagen invitado">
-            <p>Gregorio Sanchez</p>
-          </div>
-        </li>
-        <li>
-          <div class="invitado">
-            <img src="img/invitado4.jpg" alt="Imagen invitado">
-            <p>Susana Rivera</p>
-          </div>
-        </li>
-        <li>
-          <div class="invitado">
-            <img src="img/invitado5.jpg" alt="Imagen invitado">
-            <p>Harold Garcia</p>
-          </div>
-        </li>
-        <li>
-          <div class="invitado">
-            <img src="img/invitado6.jpg" alt="Imagen invitado">
-            <p>Susan Sanchez</p>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <?php include_once 'includes/templates/invitados.php'; ?>
 
     <div class="contador parallax">
       <div class="contenedor">
@@ -181,7 +141,7 @@
           <blockquote>
             <p>Sed mollis velit sit amet felis condimentum ultrices. Fusce vehicula ut sem vitae semper. Nullam blandit neque eu semper ullamcorper. Duis commodo quam in orci condimentum ultricies.</p>
             <footer class="info-testimonial clearfix">
-              <img src="/img/testimonial.jpg" alt="Imagen testimonial">
+              <img src="img/testimonial.jpg" alt="Imagen testimonial">
               <cite>Oswaldo Aponte Escobedo <span>Diseñador en @Prisma</span></cite>
             </footer>
           </blockquote>
@@ -190,7 +150,7 @@
           <blockquote>
             <p>Sed mollis velit sit amet felis condimentum ultrices. Fusce vehicula ut sem vitae semper. Nullam blandit neque eu semper ullamcorper. Duis commodo quam in orci condimentum ultricies.</p>
             <footer class="info-testimonial clearfix">
-              <img src="/img/testimonial.jpg" alt="Imagen testimonial">
+              <img src="img/testimonial.jpg" alt="Imagen testimonial">
               <cite>Oswaldo Aponte Escobedo <span>Diseñador en @Prisma</span></cite>
             </footer>
           </blockquote>
@@ -199,7 +159,7 @@
           <blockquote>
             <p>Sed mollis velit sit amet felis condimentum ultrices. Fusce vehicula ut sem vitae semper. Nullam blandit neque eu semper ullamcorper. Duis commodo quam in orci condimentum ultricies.</p>
             <footer class="info-testimonial clearfix">
-              <img src="/img/testimonial.jpg" alt="Imagen testimonial">
+              <img src="img/testimonial.jpg" alt="Imagen testimonial">
               <cite>Oswaldo Aponte Escobedo <span>Diseñador en @Prisma</span></cite>
             </footer>
           </blockquote>
@@ -236,35 +196,3 @@
 
 
 
-
-<!--
-Texto "Sobre gdlwwebcamp": 
-Texto tweers: 
-
-Integer ultricies justo nec ipsum finibus, eu interdum quam vulputate. #Pellentesque nec justo non est eleifend pulvinar.
- Integer ultricies #justo nec ipsum finibus, eu interdum quam vulputate. Pellentesque nec justo non est eleifend pulvinar.
- Integer ultricies justo nec ipsum finibus, eu interdum quam vulputate. #Pellentesque nec @justo non est eleifend pulvinar.
---> 
-
-
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.lettering.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>

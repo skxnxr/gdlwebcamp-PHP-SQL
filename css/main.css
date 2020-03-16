@@ -788,7 +788,7 @@ footer nav.redes-sociales {
   text-align: left;
 }
 p.copyright {
-  color: white;
+  color: white; 
   background-color: #2e2e2e;
   padding: 10px 0;
   margin: 20px 0 0 0;
@@ -801,7 +801,7 @@ p.copyright {
   display: inline-block;
   margin-bottom: 5px;
 }
-body.conferencia .navegacion-principal .activo{
+.navegacion-principal .activo{
   border-bottom: 2px solid #fe4918;
 }
 
@@ -955,7 +955,11 @@ div.dia i{
   color: #fe4918;
   font-size: 1.6em;
 }
-
+/* Colorbox */
+div.cboxElement{
+  padding: 30px!important;
+  text-align: center;
+}
 
 
 
