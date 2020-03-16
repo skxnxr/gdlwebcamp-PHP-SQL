@@ -5,6 +5,7 @@
     
     <section class="section contenedor">
         <h2>Calendario de eventos</h2>
+
         <?php 
         try {
             require_once('includes/funciones/bd_conexion.php');
@@ -47,11 +48,11 @@
                             setlocale(LC_TIME, 'es_ES.UTF-8');
                             setlocale(LC_TIME, 'spanish');
                             // echo strftime("%A, %d de %B del %Y", strtotime($dia) ); 
-                            echo strftime("%d de %B del %Y", strtotime($dia) ); ?>
+                            echo utf8_encode(strftime("%A, %d de %B del %Y", strtotime($dia) )); ?>
                         </h3>
                         <?php foreach($lista_eventos as $evento){?>
                             <div class="dia">
-                                <p class = "titulo"> <?php echo $evento['titulo']; ?> </p>
+                                <p class = "titulo"> <?php echo utf8_encode($evento['titulo']); ?> </p>
                                 <p class = "hora"> 
                                     <i class="fa fa-clock" aria-hidden="true"></i>
                                     <?php echo $evento['fecha'] . " " . $evento['hora']; ?>
