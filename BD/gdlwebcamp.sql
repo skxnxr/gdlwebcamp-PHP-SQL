@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 16-03-2020 a las 16:42:57
+-- Tiempo de generación: 17-03-2020 a las 17:41:40
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 7.3.12
 
@@ -159,6 +159,58 @@ INSERT INTO `invitados` (`invitado_id`, `nombre_invitado`, `apellido_invitado`, 
 (5, 'Harold', 'Garcia', 'Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie.', 'invitado5.jpg'),
 (6, 'Susan ', 'Sanchez', 'Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex blandit vehicula. Morbi porttitor tempus euismod.', 'invitado6.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `regalos`
+--
+
+DROP TABLE IF EXISTS `regalos`;
+CREATE TABLE IF NOT EXISTS `regalos` (
+  `id_regalo` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_regalo` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_regalo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `regalos`
+--
+
+INSERT INTO `regalos` (`id_regalo`, `nombre_regalo`) VALUES
+(1, 'Pulsera'),
+(2, 'Etiquetas'),
+(3, 'Bolígrafo');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registrados`
+--
+
+DROP TABLE IF EXISTS `registrados`;
+CREATE TABLE IF NOT EXISTS `registrados` (
+  `id_registrado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre_registrado` varchar(50) NOT NULL,
+  `apellido_registrado` varchar(50) NOT NULL,
+  `email_registrado` varchar(100) NOT NULL,
+  `fecha_registro` datetime NOT NULL,
+  `pases_articulos` longtext NOT NULL,
+  `talleres_registrados` longtext NOT NULL,
+  `regalo` int(11) NOT NULL,
+  `total_pagado` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_registrado`),
+  KEY `regalo` (`regalo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `registrados`
+--
+
+INSERT INTO `registrados` (`id_registrado`, `nombre_registrado`, `apellido_registrado`, `email_registrado`, `fecha_registro`, `pases_articulos`, `talleres_registrados`, `regalo`, `total_pagado`) VALUES
+(1, 'Skyner', 'Alvarez', 'sacwks@gmail.com', '2020-03-17 17:24:40', '{\"un_dia\":2,\"pase_completo\":1,\"pase_2dias\":1,\"camisas\":1,\"etiquetas\":1}', '{\"eventos\":[\"taller_01\",\"taller_02\",\"conf_03\",\"conf_05\",\"conf_08\"]}', 2, '166.3'),
+(2, 'Skyner', 'Alvarez', 'sacwks@gmail.com', '2020-03-17 17:24:56', '{\"un_dia\":2,\"pase_completo\":1,\"pase_2dias\":1,\"camisas\":1,\"etiquetas\":1}', '{\"eventos\":[\"taller_01\",\"taller_02\",\"conf_03\",\"conf_05\",\"conf_08\"]}', 2, '166.3'),
+(3, 'A40 Pedro', 's', 'alvarezskarlyn@gmail.com', '2020-03-17 17:40:10', '{\"un_dia\":1,\"camisas\":1}', '{\"eventos\":[\"taller_01\",\"conf_03\",\"sem_01\"]}', 2, '39.3');
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -169,6 +221,12 @@ INSERT INTO `invitados` (`invitado_id`, `nombre_invitado`, `apellido_invitado`, 
 ALTER TABLE `eventos`
   ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`id_cat_evento`) REFERENCES `categoria_evento` (`id_categoria`),
   ADD CONSTRAINT `eventos_ibfk_2` FOREIGN KEY (`id_inv`) REFERENCES `invitados` (`invitado_id`);
+
+--
+-- Filtros para la tabla `registrados`
+--
+ALTER TABLE `registrados`
+  ADD CONSTRAINT `registrados_ibfk_1` FOREIGN KEY (`regalo`) REFERENCES `regalos` (`id_regalo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

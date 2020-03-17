@@ -152,19 +152,19 @@
                     <div class="extras">
                         <div class="orden">
                             <label for="camisa_evento">Camisa del evento $10 <small>(Promoción 7% dto.)</small></label>
-                            <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+                            <input type="number" min="0" id="camisa_evento" name="pedido_camisas" size="3" placeholder="0">
                         </div> <!--.Orden-->
                         <div class="orden">
                             <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML5, CSS3, JavaScript, Chrome)</small></label>
-                            <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                            <input type="number" min="0" id="etiquetas" name="pedido_etiquetas" size="3" placeholder="0">
                         </div> <!--.Orden-->
                         <div class="orden">
                             <label for="regalo">Seleccione un regalo:</label> <br>
-                            <select id="regalo" required>
+                            <select id="regalo" name="regalo" required>
                                 <option value="">-- Selecione un regalo --</option> 
-                                <option value="ETI">Etiquetas</option>
-                                <option value="PUL">Pulcera</option>
-                                <option value="BOL">Bolígrafo</option>
+                                <option value="2">Etiquetas</option>
+                                <option value="1">Pulcera</option>
+                                <option value="3">Bolígrafo</option>
                             </select>
                         </div> <!--.Orden-->
                         <input type="button" id="calcular" class="boton" value="Calcular">
@@ -178,7 +178,8 @@
                         <div id="suma-total">
                                 
                         </div>
-                        <input type="submit" id="btnRegistro" class="boton" value="Pagar">
+                        <input type="hidden" name="total_pedido" id="total_pedido">
+                        <input type="submit" id="btnRegistro" name="submit" class="boton" value="Pagar">
                     </div><!--.Total-->
                 </div> <!--.Caja-->
             </div> <!--#Resumen-->

@@ -27,6 +27,8 @@
         let etiquetas = document.getElementById('etiquetas');
         let camisas = document.getElementById('camisa_evento');
 
+        botonRegistro.disabled = true;
+
         if (document.getElementById('calcular')) {
             
         
@@ -106,6 +108,10 @@
                     lista_productos.innerHTML += listadoProductos[i] + '<br/>';
                 }
                 suma.innerHTML = "$ " + totalPagar.toFixed(2);
+                
+                botonRegistro.disabled = false; 
+                document.getElementById('total_pedido').value = totalPagar;
+
 
             } 
         }
