@@ -38,12 +38,13 @@
         let etiquetas = document.getElementById('etiquetas');
         let camisas = document.getElementById('camisa_evento');
 
-        botonRegistro.disabled = true;
+        if(botonRegistro){
+            botonRegistro.disabled = true;
+        }
+        
 
         if (document.getElementById('calcular')) {
             
-        
-
         calcular.addEventListener('click', calcularMontos);
 
         pase_dia.addEventListener('blur', mostrarDias);
