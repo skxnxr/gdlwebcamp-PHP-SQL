@@ -4,6 +4,7 @@
     let regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function(){
 
+        /*
        //Código JS para el mapa 
        var map = L.map('mapa').setView([10.496262, -66.848937], 16);
 
@@ -16,6 +17,7 @@
            .openPopup();
            // .bindTooltip('Un Tooltip')
            // .openTooltip()
+        */
 
         //Datos usuarios
         let nombre = document.getElementById('nombre');
