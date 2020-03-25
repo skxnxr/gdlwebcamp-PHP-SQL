@@ -52,6 +52,7 @@ endif;
         $stmt = $conn->prepare("INSERT INTO registrados (nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado) VALUES (?,?,?,?,?,?,?,?) ");
         $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
         $stmt->execute();
+        $ID_registro = $stmt->insert_id;
         $stmt->close(); 
         $conn->close();
         //header('Location: validar_registro.php?exitoso=1');
@@ -104,23 +105,20 @@ $listaArticulos->setItems($arreglo_pedido);
 // var_dump($listaArticulos);
 // echo "</pre>";
 
-/*
 $cantidad = new Amount();
 $cantidad->setCurrency('USD')
-         ->setTotal($precio)
-         ->setDetails($detalles);
+         ->setTotal($total);
 
 $transaccion = new Transaction();
 $transaccion->setAmount($cantidad)
             ->setItemList($listaArticulos)
-            ->setDescription('Pago ')
-            ->setInvoiceNumber(uniqid());
+            ->setDescription('Pago GDLWEBCAMP ')
+            ->setInvoiceNumber($ID_registro);
 //echo $transaccion->getInvoiceNumber();
 
 $redireccionar = new RedirectUrls();
-$redireccionar->setReturnUrl(URL_SITIO . "/pago_finalizado.php?exito=true")
-              ->setCancelUrl(URL_SITIO . "/pago_finalizado.php?exito=false");
-//echo $redireccionar->getReturnUrl();
+$redireccionar->setReturnUrl(URL_SITIO . "/pago_finalizado.php?exito=true&id_pago={$ID_registro}")
+              ->setCancelUrl(URL_SITIO . "/pago_finalizado.php?exito=false&id_pago={$ID_registro}");
 
 $pago = new Payment();
 $pago->setIntent("sale")
@@ -140,4 +138,3 @@ $pago->create($apiContext);
 $aprobado = $pago->getApprovalLink();
 
 header("Location: {$aprobado}");
-*/
