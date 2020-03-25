@@ -40,9 +40,9 @@ if(isset($_POST['submit'])):
     $eventos = $_POST['registro'];
     $registro = eventos_json($eventos);
 
-    echo "<pre>";
-    var_dump($pedidoExtra);
-    echo "</pre>";
+    // echo "<pre>";
+    // var_dump($pedidoExtra);
+    // echo "</pre>";
 
     // exit; 
 endif; 
@@ -59,22 +59,16 @@ endif;
        echo $e->getMessage();
 }
 
-
-
-
 $compra = new Payer();
 $compra->setPaymentMethod('paypal');
 
+$i = 0;
+$arreglo_pedido = array();
 
-
-// $articulo = new Item();
-// $articulo
-
-
- $i = 0;
 foreach ($numeroBoletos as $key => $value) {
     if ( (int) $value['cantidad'] > 0) {
         ${"articulo$i"} = new Item();
+        $arreglo_pedido[] = ${"articulo$i"};
         ${"articulo$i"}->setName('Pase: ' . $key)
                         ->setCurrency('USD')
                         ->setQuantity((int) $value['cantidad'])
@@ -91,8 +85,8 @@ foreach ($pedidoExtra as $key => $value) {
         }else{
             $precio = (int) $value['precio'];
         }
-
         ${"articulo$i"} = new Item();
+        $arreglo_pedido[] = ${"articulo$i"};
         ${"articulo$i"}->setName('Extras: ' . $key)
                         ->setCurrency('USD')
                         ->setQuantity((int) $value['cantidad'])
@@ -100,16 +94,17 @@ foreach ($pedidoExtra as $key => $value) {
         $i++;
     }
 }
-echo $articulo2->getName();
+//echo $articulo2->getName();
+
+
+$listaArticulos = new ItemList();
+$listaArticulos->setItems($arreglo_pedido);
+
+// echo "<pre>";
+// var_dump($listaArticulos);
+// echo "</pre>";
 
 /*
-$listaArticulos = new ItemList();
-$listaArticulos->setItems(array($articulo));
-
-$detalles = new Details();
-$detalles->setShipping($envio)
-         ->setSubtotal($precio);
-
 $cantidad = new Amount();
 $cantidad->setCurrency('USD')
          ->setTotal($precio)
