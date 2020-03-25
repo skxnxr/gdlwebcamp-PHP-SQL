@@ -135,6 +135,6 @@ $pago->create($apiContext);
         echo "</pre>";
 }
 
-$aprobado = $pago->getApprovalLink();
+$aprobado = $pago->getApprovalLink(); 
 
 header("Location: {$aprobado}");
