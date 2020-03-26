@@ -1,8 +1,16 @@
 <?php
+include_once 'funciones/funciones.php';
 
 // echo "<pre>";
 //     var_dump($_POST);
 // echo "</pre>";
+
+//Para comprobar la conexion a la BD:
+// if($conn->ping()){
+//     echo "Conectado";
+// }else{
+//     echo "No";
+// }
 
 if (isset($_POST['agregar-admin'])) {
     $usuario = $_POST['usuario'];
