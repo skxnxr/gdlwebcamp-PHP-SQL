@@ -20,6 +20,8 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/admin-ajax.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
