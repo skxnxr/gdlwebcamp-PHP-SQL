@@ -11,8 +11,8 @@ include_once 'templates/navegacion.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Crear administrador
-        <small>Llena el formulario parar crear un administrador</small>
+        Nuevo administrador
+        <small>Recuerda llenar todos los campos</small>
       </h1>
     </section>
 
@@ -26,7 +26,7 @@ include_once 'templates/navegacion.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Crear administrador</h3>
+          <h3 class="box-title">Llena el formulario parar crear un administrador</h3>
         </div>
         <div class="box-body">
             <!-- form start -->
@@ -34,15 +34,15 @@ include_once 'templates/navegacion.php';
               <div class="box-body">
                 <div class="form-group">
                   <label for="usuario">Usuario:</label>
-                  <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Tu usuario">
+                  <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
                 </div>
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nick">
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nick">
                 </div>
                 <div class="form-group">
                   <label for="password">Contraseña:</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Tu contraseña para iniciar sesión">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña para iniciar sesión">
                 </div>
 
                 </div>
@@ -51,6 +51,7 @@ include_once 'templates/navegacion.php';
               <!-- /.box-body -->
 
               <div class="box-footer">
+                <input type="hidden" name="agregar-admin" value="1">
                 <button type="submit" class="btn btn-primary">Añadir</button>
               </div>
             </form>
