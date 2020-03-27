@@ -22,10 +22,12 @@
 <script src="dist/js/demo.js"></script>
 <script src="js/sweetalert2.all.min.js"></script>
 <script src="js/admin-ajax.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
-</script>
+<!-- DataTables -->
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
+<!-- Scripts propio -->
+<script src="js/app.js"></script>
+
+
 </body>
 </html>
