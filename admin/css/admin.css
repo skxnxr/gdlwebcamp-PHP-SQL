@@ -8,3 +8,6 @@
 .skin-blue .sidebar-menu>li.header{
     color: white;
 }
+.login-page .main-footer{
+    display: none;
+}
