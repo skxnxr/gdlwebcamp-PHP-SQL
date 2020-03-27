@@ -70,9 +70,9 @@ $(document).ready(function(){
                           toast.addEventListener('mouseenter', Swal.stopTimer)
                           toast.addEventListener('mouseleave', Swal.resumeTimer)
                         }
-                    //     ,onClose: () => {
-                    //         window.location.href = 'index.php';
-                    //    }
+                        ,onClose: () => {
+                            window.location.href = './admin.php';
+                       }
                       })
                       Toast.fire({
                         icon: 'success',
@@ -85,6 +85,11 @@ $(document).ready(function(){
                         text: 'Usuario o contraseña incorrectos'
                         // footer: '<a href>Why do I have this issue?</a>'
                       })
+                      //******* Para redireciona r*************
+                    //   setTimeout(function() {
+                    //         window.location.href = './admin.php'; 
+                    //   });
+
                 };
             }
         })

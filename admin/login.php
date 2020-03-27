@@ -1,6 +1,10 @@
 <?php 
-include_once 'templates/header.php';
-
+    session_start();
+    $cerrar_sesion = $_GET['cerrar_sesion'];
+    if ($cerrar_sesion) {
+        session_destroy();
+    }
+    include_once 'templates/header.php';
 
 ?>
 
@@ -14,13 +18,6 @@ include_once 'templates/header.php';
   <div class="login-box-body">
     <p class="login-box-msg">Zona de administración</p>
 
-    <?php 
-    session_start();
-    // echo "<pre>";
-    //     var_dump($_SESSION);
-    // echo "</pre>";
-
-    ?>
 
     <form name="login-admin-form" id="login-admin" method="post" action="insertar-admin.php">
       <div class="form-group has-feedback">
