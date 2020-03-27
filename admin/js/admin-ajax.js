@@ -58,31 +58,34 @@ $(document).ready(function(){
             dataType: 'json',
             success: function(data){
                 console.log(data);
-                // var resultado = data;
-                // if(resultado.respuesta === 'exito'){
-                //     const Toast = Swal.mixin({
-                //         toast: true,
-                //         position: 'center',
-                //         showConfirmButton: false,
-                //         timer: 2400,
-                //         timerProgressBar: true,
-                //         onOpen: (toast) => {
-                //           toast.addEventListener('mouseenter', Swal.stopTimer)
-                //           toast.addEventListener('mouseleave', Swal.resumeTimer)
-                //         }
-                //       })
-                //       Toast.fire({
-                //         icon: 'success',
-                //         title: 'Administrador creado correctamente'
-                //       })       
-                // }else{
-                //     Swal.fire({
-                //         icon: 'error',
-                //         title: 'Error',
-                //         text: 'Usuario ya registrado'
-                //         // footer: '<a href>Why do I have this issue?</a>'
-                //       })
-                // };
+                var resultado = data;
+                if(resultado.respuesta === 'exitoso'){
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'center',
+                        showConfirmButton: false,
+                        timer: 2400,
+                        timerProgressBar: true,
+                        onOpen: (toast) => {
+                          toast.addEventListener('mouseenter', Swal.stopTimer)
+                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    //     ,onClose: () => {
+                    //         window.location.href = 'index.php';
+                    //    }
+                      })
+                      Toast.fire({
+                        icon: 'success',
+                        title: 'Bienvenido ' +resultado.usuario+'!'
+                      })       
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Usuario o contraseña incorrectos'
+                        // footer: '<a href>Why do I have this issue?</a>'
+                      })
+                };
             }
         })
 
