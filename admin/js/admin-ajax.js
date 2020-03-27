@@ -85,7 +85,7 @@ $(document).ready(function(){
                         text: 'Usuario o contraseña incorrectos'
                         // footer: '<a href>Why do I have this issue?</a>'
                       })
-                      //******* Para redireciona r*************
+                      //******* Para redirecionar*************
                     //   setTimeout(function() {
                     //         window.location.href = './admin.php'; 
                     //   });
