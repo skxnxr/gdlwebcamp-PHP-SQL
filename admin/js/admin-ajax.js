@@ -45,6 +45,26 @@ $(document).ready(function(){
 
     });
 
+    //Eliminar un registro
+    $('.borrar_registro').on('click', function (e) {
+        e.preventDefault();        
+        var id = $(this).attr('data-id');
+        var tipo = $(this).attr('data-tipo');
+        //console.log("ID: " + id);
+         
+        $.ajax({
+            type: 'post',
+            data: {
+                'id': id,
+                'registro': 'eliminar'
+            },
+            url: 'modelo-'+tipo+'.php',
+            success:function(data) {
+                console.log(data);
+            }
+        })
+    })
+
     $('#login-admin').on('submit', function(e) {
         e.preventDefault();
 
