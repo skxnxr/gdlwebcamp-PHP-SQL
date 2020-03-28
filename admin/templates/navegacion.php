@@ -9,8 +9,8 @@
         </div> -->
         <div class=" info">
         <!-- <div class="pull-left info"> -->
-          <p>Administrador</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>Admin: <?php echo $_SESSION['usuario']; ?></p>
+          <a href="#"><i class="fa fa-circle text-success"></i>Nivel: Administrador</a>
         </div>
       </div>
       <!-- search form -->
@@ -88,7 +88,7 @@
             <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar  </a></li>
           </ul>
         </li>
-
+        <?php if ($_SESSION['nivel'] == 1): ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user" aria-hidden="true"></i>
@@ -99,7 +99,7 @@
             <li><a href="crear-admin.php"><i class="fa fa-plus-circle"></i> Agregar  </a></li>
           </ul>
         </li>
-
+        <?php endif; ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-comments" aria-hidden="true"></i>
