@@ -30,7 +30,7 @@ $(document).ready(function(){
                       })
                       Toast.fire({
                         icon: 'success',
-                        title: 'Administrador creado correctamente'
+                        title: 'Administrador guardado correctamente'
                       })       
                 }else{
                     Swal.fire({
