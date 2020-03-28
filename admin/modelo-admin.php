@@ -11,7 +11,7 @@
 //     echo "No";
 // }
 
-if (isset($_POST['agregar-admin'])) {
+if ($_POST['registro'] == 'nuevo') {
 
     //die(json_encode($_POST));
 
@@ -50,6 +50,10 @@ if (isset($_POST['agregar-admin'])) {
     }
 
     die(json_encode($respuesta));
+}
+
+if ($_POST['registro'] == 'actualizar') {
+    die(json_encode($_POST));
 }
 
 if (isset($_POST['login-admin'])) {

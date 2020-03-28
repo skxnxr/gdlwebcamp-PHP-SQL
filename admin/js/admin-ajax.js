@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#crear-admin').on('submit', function(e) {
+    $('#guardar-registro').on('submit', function(e) {
         e.preventDefault();
 
         var datos = $(this).serializeArray();
@@ -11,7 +11,7 @@ $(document).ready(function(){
             url: $(this).attr('action'),
             dataType: 'json',
             success: function(data){
-                //console.log(data);
+                console.log(data);
                 var resultado = data;
                 if(resultado.respuesta === 'exito'){
                     const Toast = Swal.mixin({
