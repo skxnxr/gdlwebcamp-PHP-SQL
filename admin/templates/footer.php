@@ -27,7 +27,7 @@
 <script src="js/dataTables.bootstrap.min.js"></script>
 <!-- Scripts propio -->
 <script src="js/app.js"></script>
-
+<script src="js/login-ajax.js"></script>
 
 </body>
 </html>
