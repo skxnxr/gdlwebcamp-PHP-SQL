@@ -51,18 +51,45 @@ $(document).ready(function(){
         var id = $(this).attr('data-id');
         var tipo = $(this).attr('data-tipo');
         //console.log("ID: " + id);
-         
-        $.ajax({
-            type: 'post',
-            data: {
-                'id': id,
-                'registro': 'eliminar'
-            },
-            url: 'modelo-'+tipo+'.php',
-            success:function(data) {
-                console.log(data);
-            }
-        })
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "Un registro eliminado no se puede recuperar",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, ¡Eliminar!',
+            cancelButtonText: 'Cancelar'
+          }).then((result) => {
+                $.ajax({
+                    type: 'post',
+                    data: {
+                        'id': id,
+                        'registro': 'eliminar'
+                    },
+                    url: 'modelo-'+tipo+'.php',
+                    success:function(data) {
+                        //console.log(data);
+                        var resultado = JSON.parse(data);
+                        //console.log(resultado);
+                        if (resultado.respuesta == 'exito') {
+                            Swal.fire(
+                                '¡Eliminado!',
+                                'Administrador eliminado correctamente',
+                                'success'
+                              )
+                            jQuery('[data-id="'+resultado.id_eliminado+'"]').parents('tr').remove();
+                        }else{
+                            Swal.fire({
+                                icon: 'error',
+                                title: '¡Error!',
+                                text: 'No se pudo eliminar'
+                              })
+                        }
+                        
+                    }
+                })
+         })      
     })
 
     $('#login-admin').on('submit', function(e) {
