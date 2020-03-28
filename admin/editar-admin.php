@@ -18,8 +18,8 @@ include_once 'funciones/funciones.php';
     <!-- Content Header (Page header) --> 
     <section class="content-header">
       <h1>
-        Nuevo administrador
-        <small>Recuerda llenar todos los campos</small>
+        Editar administrador
+        <!-- <small>Recuerda llenar todos los campos</small> -->
       </h1>
     </section>
 
@@ -33,7 +33,7 @@ include_once 'funciones/funciones.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Llena el formulario parar crear un administrador</h3>
+          <h3 class="box-title">Aquí podras editar los datos de los administradores: </h3>
         </div>
         <div class="box-body">
 
@@ -72,7 +72,7 @@ include_once 'funciones/funciones.php';
               <div class="box-footer">
                 <input type="hidden" name="registro" value="actualizar">
                 <input type="hidden" name="id_registro" value="<?php echo $id ?>">
-                <button type="submit" class="btn btn-primary">Añadir</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
               </div>
             </form>
         </div>
