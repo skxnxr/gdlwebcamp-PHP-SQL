@@ -49,8 +49,8 @@
             </span> -->
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul"></i>Ver todos</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar  </a></li>
+            <li><a href="lista-evento.php"><i class="fa fa-list-ul"></i>Ver todos</a></li>
+            <li><a href="editar-evento.php"><i class="fa fa-plus-circle"></i> Agregar  </a></li>
             <!-- <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li> -->
           </ul>
