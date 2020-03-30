@@ -51,11 +51,12 @@ $(document).ready(function () {
   })
 
   //Initialize Select2 Elements
-  $('.seleccionar').select2()
+  $('.select2').select2()
 
   //Timepicker
   $('.timepicker').timepicker({
-    showInputs: false
+    showInputs: false,
+    timeFormat: 'HH:mm'
   })
 
 

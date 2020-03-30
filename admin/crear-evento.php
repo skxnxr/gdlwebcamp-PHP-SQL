@@ -75,10 +75,8 @@ include_once 'templates/navegacion.php';
               <div class="bootstrap-timepicker">
                     <div class="form-group">
                       <label>Hora:</label>
-
                         <div class="input-group">
                           <input type="text" class="form-control timepicker" name="hora_evento">
-
                             <div class="input-group-addon">
                               <i class="fa fa-clock-o"></i>
                             </div>
