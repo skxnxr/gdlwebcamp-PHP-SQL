@@ -64,10 +64,10 @@ include_once 'templates/navegacion.php';
                      <td><?php echo $eventos['cat_evento']; ?></td>
                      <td><?php echo $eventos['nombre_invitado'] . "" . $eventos['apellido.invitado']; ?> </td>
                      <td>
-                       <a href="editar-evento.php?id=<?php echo $evento['id_evento']; ?>" class="btn bg-orange btn-flat margin">
+                       <a href="editar-evento.php?id=<?php echo $eventos['evento_id']; ?>" class="btn bg-orange btn-flat margin">
                          <i class="fa fa-pencil"></i>
                        </a>
-                       <a href="#" data-id="<?php echo $eventos['id_evento']; ?>" data-tipo="evento" class="btn bg-maroon btn-flat margin borrar_registro">
+                       <a href="#" data-id="<?php echo $eventos['evento_id']; ?>" data-tipo="evento" class="btn bg-maroon btn-flat margin borrar_registro">
                          <i class="fa fa-trash"></i>
                        </a>
                        
