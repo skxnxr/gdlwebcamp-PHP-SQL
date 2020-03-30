@@ -62,7 +62,7 @@ if ($_POST['registro'] == 'actualizar') {
     //Script curso para la hora
     //$hora_formateada = date('H:i', srtotime($hora));
     try {
-        $stmt = $conn->prepare('UPDATE eventos SET nombre_evento = ?, fecha_evento = ?, hora_evento = ?, id_cat_evento = ?, id_inv = ? WHERE evento_id = ? ');
+        $stmt = $conn->prepare('UPDATE eventos SET nombre_evento = ?, fecha_evento = ?, hora_evento = ?, id_cat_evento = ?, id_inv = ?, editado = NOW() WHERE evento_id = ? ');
         $stmt->bind_param('sssiii', $titulo, $fecha_formateada, $time, $categoria_id, $invitado_id, $id_registro);
         $stmt->execute();
        if ($stmt->affected_rows > 0) {
