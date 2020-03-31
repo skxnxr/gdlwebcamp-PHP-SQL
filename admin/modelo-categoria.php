@@ -3,6 +3,7 @@ include_once 'funciones/funciones.php';
 
 $nombre_categoria = $_POST['nombre_categoria'];
 $icono = $_POST['icono'];
+$id_registro = $_POST['id_registro'];
 
 if ($_POST['registro'] == 'nuevo') {
 
@@ -38,13 +39,13 @@ if ($_POST['registro'] == 'actualizar') {
     //die(json_encode($_POST));
 
     try {
-        $stmt = $conn->prepare('UPDATE eventos SET nombre_evento = ?, fecha_evento = ?, hora_evento = ?, id_cat_evento = ?, id_inv = ?, editado = NOW() WHERE evento_id = ? ');
-        $stmt->bind_param('sssiii', $titulo, $fecha_formateada, $time, $categoria_id, $invitado_id, $id_registro);
+        $stmt = $conn->prepare('UPDATE categoria_evento SET cat_evento = ?, icono = ?, editado = NOW() WHERE id_categoria = ? ');
+        $stmt->bind_param('ssi', $nombre_categoria, $icono, $id_registro);
         $stmt->execute();
        if ($stmt->affected_rows > 0) {
            $respuesta = array (
                'respuesta' => 'exito',
-               'id_actualizado' => $id_registro
+               'id_actualizado' => $id_registro 
            );
        }else{
             $respuesta = array (
