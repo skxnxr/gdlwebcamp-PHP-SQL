@@ -4,6 +4,7 @@ include_once 'funciones/funciones.php';
 $nombre = $_POST['nombre_invitado'];
 $apellido = $_POST['apellido_invitado'];
 $biografia = $_POST['biografia_invitado'];
+$id_registro = $_POST['id_registro'];
 
 if ($_POST['registro'] == 'nuevo') {
 
@@ -57,12 +58,39 @@ if ($_POST['registro'] == 'nuevo') {
 
 if ($_POST['registro'] == 'actualizar') {
     //die(json_encode($_POST));
+    /* $respuesta = array(
+        'post' => $_POST,
+        'file' => $_FILES
+    );
+    die(json_encode($respuesta));*/
+
+    $directorio = "../img/invitados/";
+
+    if (!is_dir($directorio)) {
+        mkdir($directorio, 0755, true);
+    }
+
+    if(move_uploaded_file($_FILES['archivo_imagen']['tmp_name'], $directorio . $_FILES['archivo_imagen']['name'])){
+        $imagen_url = $_FILES['archivo_imagen']['name'];
+        $imagen_resultado = "Se subio correctamente";
+    }else{
+        $respuesta = array (
+            'respuesta' => error_get_last()
+        );
+    }
 
     try {
-        $stmt = $conn->prepare('UPDATE categoria_evento SET cat_evento = ?, icono = ?, editado = NOW() WHERE id_categoria = ? ');
-        $stmt->bind_param('ssi', $nombre_categoria, $icono, $id_registro);
-        $stmt->execute();
-       if ($stmt->affected_rows > 0) {
+        if ($_FILES['archivo_imagen']['size'] > 0 ) {
+            //Con imagen cambiada
+            $stmt = $conn->prepare('UPDATE invitados SET nombre_invitado = ?, apellido_invitado = ?, descripcion = ?, url_imagen = ? WHERE invitado_id = ? ');
+            $stmt->bind_param("ssssi", $nombre, $apellido, $biografia, $imagen_url, $id_registro);
+        }else{
+            //Sin cambiar la imagen
+            $stmt = $conn->prepare('UPDATE invitados SET nombre_invitado = ?, apellido_invitado = ?, descripcion = ? WHERE invitado_id = ? ');
+            $stmt->bind_param("sssi", $nombre, $apellido, $biografia, $id_registro);
+        }
+        $estado = $stmt->execute();
+       if ($estado == true) {
            $respuesta = array (
                'respuesta' => 'exito',
                'id_actualizado' => $id_registro 
