@@ -57,7 +57,11 @@ $(document).ready(function () {
   $('.timepicker').timepicker({
     showInputs: false,
     timeFormat: 'HH:mm'
-  })
+  });
+  
+  //Iconpicker
+  // Create instance if not exists (returns a jQuery object)
+$('#icono').iconpicker();
 
 
 

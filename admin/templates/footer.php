@@ -31,6 +31,8 @@
 <script src="js/select2.full.min.js"></script>
 <!-- bootstrap time picker -->
 <script src="js/bootstrap-timepicker.min.js"></script>
+<!-- Font Awesome Icon Picker -->
+<script src="js/fontawesome-iconpicker.min.js"></script>
 <!-- Scripts propio -->
 <script src="js/app.js"></script>
 <script src="js/login-ajax.js"></script>
