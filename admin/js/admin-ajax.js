@@ -45,6 +45,57 @@ $(document).ready(function(){
 
     });
 
+    //Se ejecuta cuando hay un archivo
+    $('#guardar-registro-archivo').on('submit', function(e) {
+        e.preventDefault();
+
+        var datos = new FormData(this);
+
+        $.ajax({
+            type: $(this).attr('method'),
+            data: datos,
+            url: $(this).attr('action'),
+            dataType: 'json',
+            contentType : false,
+            processData : false,
+            async : true,
+            cache : false,
+            success: function(data){
+                console.log(data);
+                var resultado = data;
+                if(resultado.respuesta === 'exito'){
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'center',
+                        showConfirmButton: false,
+                        timer: 2400,
+                        timerProgressBar: true,
+                        onOpen: (toast) => {
+                          toast.addEventListener('mouseenter', Swal.stopTimer)
+                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    //     ,onClose: () => {
+                    //         window.location.href = 'index.php';
+                    //    }
+                      })
+                      Toast.fire({
+                        icon: 'success',
+                        title: 'Administrador guardado correctamente'
+                      })       
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Usuario ya registrado'
+                        // footer: '<a href>Why do I have this issue?</a>'
+                      })
+                };
+            }
+        })
+
+    });
+    
+
     //Eliminar un registro
     $('.borrar_registro').on('click', function (e) {
         e.preventDefault();        
