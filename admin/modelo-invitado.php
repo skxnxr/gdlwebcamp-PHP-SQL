@@ -1,27 +1,43 @@
 <?php
 include_once 'funciones/funciones.php';
 
-$nombre_categoria = $_POST['nombre_categoria'];
-$icono = $_POST['icono'];
-$id_registro = $_POST['id_registro'];
+$nombre = $_POST['nombre_invitado'];
+$apellido = $_POST['apellido_invitado'];
+$biografia = $_POST['biografia_invitado'];
 
 if ($_POST['registro'] == 'nuevo') {
 
-    $respuesta = array(
+   /* $respuesta = array(
         'post' => $_POST,
         'file' => $_FILES
     );
-    die(json_encode($respuesta));
+    die(json_encode($respuesta));*/
+
+    $directorio = "../img/invitados/";
+
+    if (!is_dir($directorio)) {
+        mkdir($directorio, 0755, true);
+    }
+
+    if(move_uploaded_file($_FILES['archivo_imagen']['tmp_name'], $directorio . $_FILES['archivo_imagen']['name'])){
+        $imagen_url = $_FILES['archivo_imagen']['name'];
+        $imagen_resultado = "Se subio correctamente";
+    }else{
+        $respuesta = array (
+            'respuesta' => error_get_last()
+        );
+    }
     
     try {
-        $stmt = $conn->prepare("INSERT INTO categoria_evento (cat_evento, icono) VALUES (?,?)");
-        $stmt->bind_param("ss", $nombre_categoria, $icono);
+        $stmt = $conn->prepare("INSERT INTO invitados (nombre_invitado, apellido_invitado, descripcion, url_imagen) VALUES (?,?,?,?)");
+        $stmt->bind_param("ssss", $nombre, $apellido, $biografia, $imagen_url);
         $stmt->execute();
         $id_insertado = $stmt->insert_id;
         if($stmt->affected_rows > 0){
             $respuesta = array(
                 'respuesta' => 'exito',
-                'id_insertado' => $id_insertado 
+                'id_insertado' => $id_insertado,
+                'resultado_imagen' => $imagen_resultado
             );
         }else{
             $respuesta = array(
