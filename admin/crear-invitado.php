@@ -13,7 +13,7 @@ include_once 'templates/navegacion.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Crear categorías de evento
+        Crear invitado
         <small>Recuerda llenar todos los campos</small>
       </h1>
     </section>
@@ -28,29 +28,32 @@ include_once 'templates/navegacion.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Llena el formulario parar una categoría</h3>
+          <h3 class="box-title">Llena el formulario parar añadir un invitado</h3>
         </div>
         <div class="box-body">
             <!-- form start -->
-            <form role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo-categoria.php">
+            <form role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo-invitado.php">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="usuario">Nombre:</label>
-                  <input type="text" class="form-control" id="nombre_categoria" name="nombre_categoria" placeholder="Categoría">
+                  <label for="nombre_invitado">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre_invitado" name="nombre_invitado" placeholder="Nombre">
                 </div>
                 <div class="form-group">
-                  <label for="">Icono:</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-address-book"></i>
-                        </div>
-                        <input type="text" id="icono" name="icono" class="form-control pull-right" placeholder="fa-icon">
-                    </div>
+                  <label for="apellido_invitado">Apellido:</label>
+                  <input type="text" class="form-control" id="apellido_invitado" name="apellido_invitado" placeholder="Apellido">
                 </div>
+                <div class="form-group">
+                    <label for="biografia_invitado">Biografía</label>
+                    <textarea class="form-control" name="biografia_invitado" id="biografia_invitado" rows="8" placeholder="Biografía"></textarea>
                 </div>
+                <div class="form-group">
+                  <label for="imagen_invitado">Imagen:</label>
+                  <input class="form-control" type="file" id="imagen_invitado" name="archivo_imagen">
+                  <p class="help-block">Añade la imagen del invitado aquí.</p>
+                </div>
+              
 
-              </div>
-              <!-- /.box-body -->
+              </div> <!-- /.box-body -->
 
               <div class="box-footer">
                 <input type="hidden" name="registro" value="nuevo">
