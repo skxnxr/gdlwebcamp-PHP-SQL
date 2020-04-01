@@ -70,7 +70,21 @@ include_once 'templates/navegacion.php';
                       </td>
                       <td> <?php echo $registrados['email_registrado']; ?> </td>
                       <td> <?php echo $registrados['fecha_registro']; ?> </td>
-                      <td> <?php echo $registrados['pases_articulos']; ?> </td>
+                      <td> 
+                        <?php 
+                            $articulos = json_decode($registrados['pases_articulos'], true);
+                            $arreglo_articulos = array(
+                              'un_dia' => 'Pase 1 día',
+                              'pase_2dias' => 'Pase 2 días',
+                              'pase_completo' => 'Pase completo',
+                              'camisas' => 'Camisas',
+                              'etiquetas' => 'Etiquetas'
+                            );
+                            foreach ($articulos as $key => $articulo) {
+                              echo $articulo . " " . $arreglo_articulos[$key]. "<br>";
+                            }
+                        ?> 
+                      </td>
                       <td> <?php echo $registrados['talleres_registrados']; ?> </td>
                       <td> <?php echo $registrados['nombre_regalo']; ?> </td>
                       <td>$ <?php echo $registrados['total_pagado']; ?> </td>
