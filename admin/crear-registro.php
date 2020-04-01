@@ -160,7 +160,7 @@ include_once 'templates/navegacion.php';
                                   <p><?php echo $tipo; ?>:</p>
                                     <?php foreach($eventos_dias as $evento){ ?>
                                         <label>
-                                            <input type="checkbox" class="flat-green" name="registro[]" id="<?php echo $evento['id']; ?>" value="<?php echo $evento['id']; ?>">
+                                            <input type="checkbox" class="flat-green" name="registro_evento[]" id="<?php echo $evento['id']; ?>" value="<?php echo $evento['id']; ?>">
                                             <time>
                                                 <?php  
                                                 $hora = $evento['hora']; 
