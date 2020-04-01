@@ -82,7 +82,7 @@ if ($_POST['registro'] == 'actualizar') {
     try {
         if ($_FILES['archivo_imagen']['size'] > 0 ) {
             //Con imagen cambiada
-            $stmt = $conn->prepare('UPDATE invitados SET nombre_invitado = ?, apellido_invitado = ?, descripcion = ?, url_imagen = ? WHERE invitado_id = ? ');
+            $stmt = $conn->prepare('UPDATE invitados SET nombre_invitado = ?, apellido_invitado = ?, descripcion = ?, url_imagen = ?, editado = NOW() WHERE invitado_id = ? ');
             $stmt->bind_param("ssssi", $nombre, $apellido, $biografia, $imagen_url, $id_registro);
         }else{
             //Sin cambiar la imagen
