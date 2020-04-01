@@ -873,6 +873,12 @@ div.paquetes .tabla-precio input{
   color: #fe4918;
   font-weight: bold;
 }
+.contenido-dia .autor {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
 
 /** Resumen Registro **/
 div.resumen p{
