@@ -85,7 +85,18 @@ include_once 'templates/navegacion.php';
                             }
                         ?> 
                       </td>
-                      <td> <?php echo $registrados['talleres_registrados']; ?> </td>
+                      <td> 
+                        <?php $eventos_resultado = $registrados['talleres_registrados']; 
+                            $talleres = json_decode($eventos_resultado, true);
+                            $talleres = implode("', '", $talleres['eventos']);
+                            $sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE clave IN ('$talleres') ";
+                            //echo $sql_talleres;
+                            $resultado_talleres = $conn->query($sql_talleres);
+                            while ($eventos = $resultado_talleres->fetch_assoc()) {
+                              echo $eventos['nombre_evento'] . " " . $eventos['fecha_evento'] . " " . $eventos['hora_evento'] . "<br>";
+                            }
+                        ?> 
+                      </td>
                       <td> <?php echo $registrados['nombre_regalo']; ?> </td>
                       <td>$ <?php echo $registrados['total_pagado']; ?> </td>
                       <td>
