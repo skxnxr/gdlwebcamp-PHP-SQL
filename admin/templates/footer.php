@@ -33,7 +33,10 @@
 <script src="js/bootstrap-timepicker.min.js"></script>
 <!-- Font Awesome Icon Picker -->
 <script src="js/fontawesome-iconpicker.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="js/icheck.min.js"></script>
 <!-- Scripts propio -->
+<script src="../js/cotizador.js"></script>
 <script src="js/app.js"></script>
 <script src="js/login-ajax.js"></script>
 

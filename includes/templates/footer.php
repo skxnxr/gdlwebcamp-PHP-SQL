@@ -68,6 +68,7 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/cotizador.js"></script>
   
   <!-- Script para selecionar las hojas de estilo dependiendo de la pagina  -->
   <?php 
