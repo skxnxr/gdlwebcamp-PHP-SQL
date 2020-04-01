@@ -62,8 +62,10 @@ include_once 'templates/navegacion.php';
                         <?php echo $registrados['nombre_registrado'] . " " . $registrados['apellido_registrado']; 
                           $pagado = $registrados['pagado'];
                           if ($pagado) {
+                            echo '<br>';
                             echo '<span class="badge bg-green">Pagado</span>';
                           }else{
+                            echo '<br>';
                             echo '<span class="badge bg-red">No pagado</span>';
                           }
                         ?>

@@ -81,6 +81,7 @@
                 <h3>Elige tus talleres</h3>
                 <div class="caja">
                     <?php
+                    
                         try {
                             require_once('includes/funciones/bd_conexion.php');
                             $sql = "SELECT eventos.*, categoria_evento.cat_evento, invitados.nombre_invitado, invitados.apellido_invitado";
@@ -95,10 +96,24 @@
                         } catch (Exception $e) {
                             echo $e->getMessage();
                         }
-                        $eventos = $resultado->fetch_assoc();
-                        echo "<pre>";
-                        var_dump($eventos);
-                        echo "</pre>";
+                        $eventos_dias = array();
+                        while ($eventos = $resultado->fetch_assoc()) {
+                            $fecha = $eventos['fecha_evento'];
+                            setlocale(LC_ALL,"es_ES");
+                            $dia_semana = strftime("%A", strtotime($fecha));
+                            $categoria = $eventos['cat_evento'];
+                            $dia = array(
+                                'nombre_evento' => $eventos['nombre_evento'],
+                                'hora' => $eventos['hora_evento'],
+                                'id' => $eventos['evento_id'],
+                                'nombre_invitado' => $eventos['nombre_invitado'],
+                                'apellido_invitado' => $eventos['apellido_invitado']
+                            );
+                            $eventos_dias[$dia_semana]['eventos'][$categoria][] = $dia;
+                        } 
+                         echo "<pre>";
+                         var_dump($eventos_dias);
+                         echo "</pre>";
                     ?>
                       <div id="viernes" class="contenido-dia clearfix">
                           <h4>Viernes</h4>
