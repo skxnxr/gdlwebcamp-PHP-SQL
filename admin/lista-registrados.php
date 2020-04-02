@@ -83,7 +83,12 @@ include_once 'templates/navegacion.php';
                               'etiquetas' => 'Etiquetas'
                             );
                             foreach ($articulos as $key => $articulo) {
-                              echo $articulo . " " . $arreglo_articulos[$key]. "<br>";
+                              if (array_key_exists('cantidad', $articulo)) {
+                                echo $articulo['cantidad'] . " " . $arreglo_articulos[$key]. "<br>";
+                              }else {
+                                echo $articulo . " " . $arreglo_articulos[$key]. "<br>";
+                              }
+                              
                             }
                         ?> 
                       </td>
@@ -91,7 +96,8 @@ include_once 'templates/navegacion.php';
                         <?php $eventos_resultado = $registrados['talleres_registrados']; 
                             $talleres = json_decode($eventos_resultado, true);
                             $talleres = implode("', '", $talleres['eventos']);
-                            $sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE clave IN ('$talleres') ";
+                            $sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE evento_id IN ('$talleres') ";
+                            //$sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE clave IN ('$talleres') OR evento_id IN ('$talleres') ";
                             //echo $sql_talleres;
                             $resultado_talleres = $conn->query($sql_talleres);
                             while ($eventos = $resultado_talleres->fetch_assoc()) {

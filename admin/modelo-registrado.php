@@ -83,7 +83,7 @@ if ($_POST['registro'] == 'eliminar') {
     //die(json_encode($_POST));
     $id_borrar = $_POST['id'];
     try {
-        $stmt = $conn->prepare("DELETE FROM categoria_evento WHERE id_categoria = ? ");
+        $stmt = $conn->prepare("DELETE FROM registrados WHERE id_registrado = ? ");
         $stmt->bind_param("i", $id_borrar);
         $stmt->execute();
         if ($stmt->affected_rows) {
