@@ -34,14 +34,21 @@
             
         calcular.addEventListener('click', calcularMontos);
 
-        pase_dia.addEventListener('blur', mostrarDias);
-        pase_dosdias.addEventListener('blur', mostrarDias);
-        pase_completo.addEventListener('blur', mostrarDias);
+        pase_dia.addEventListener('click', mostrarDias);
+        pase_dosdias.addEventListener('click', mostrarDias);
+        pase_completo.addEventListener('click', mostrarDias);
 
         nombre.addEventListener('blur', validarCampos);
         apellido.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarEmail);
+
+        var formulario_editar = document.getElementsByClassName('editar-form');
+        if (formulario_editar.length > 0) {
+            if (pase_dia.value || pase_dosdias.value || pase_completo.value) {
+                mostrarDias();
+            }
+        }
 
         function validarCampos() {
             if (this.value == '') {

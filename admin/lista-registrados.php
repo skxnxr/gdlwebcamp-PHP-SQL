@@ -102,10 +102,10 @@ include_once 'templates/navegacion.php';
                       <td> <?php echo $registrados['nombre_regalo']; ?> </td>
                       <td>$ <?php echo $registrados['total_pagado']; ?> </td>
                       <td>
-                        <a href="editar-registro.php?id=<?php echo $registrados['id_registrados']; ?>" class="btn bg-orange btn-flat margin">
+                        <a href="editar-registro.php?id=<?php echo $registrados['id_registrado']; ?>" class="btn bg-orange btn-flat margin">
                           <i class="fa fa-pencil"></i>
                         </a>
-                        <a href="#" data-id="<?php echo $registrados['id_registrados']; ?>" data-tipo="registrado" class="btn bg-maroon btn-flat margin borrar_registro">
+                        <a href="#" data-id="<?php echo $registrados['id_registrado']; ?>" data-tipo="registrado" class="btn bg-maroon btn-flat margin borrar_registro">
                           <i class="fa fa-trash"></i>
                         </a>
                       </td>
