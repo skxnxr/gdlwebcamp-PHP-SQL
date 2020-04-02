@@ -96,8 +96,8 @@ include_once 'templates/navegacion.php';
                         <?php $eventos_resultado = $registrados['talleres_registrados']; 
                             $talleres = json_decode($eventos_resultado, true);
                             $talleres = implode("', '", $talleres['eventos']);
-                            $sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE evento_id IN ('$talleres') ";
-                            //$sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE clave IN ('$talleres') OR evento_id IN ('$talleres') ";
+                            //$sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE evento_id IN ('$talleres') ";
+                            $sql_talleres = "SELECT nombre_evento, fecha_evento, hora_evento FROM eventos WHERE clave IN ('$talleres') OR evento_id IN ('$talleres') ";
                             //echo $sql_talleres;
                             //Para debuggear
                             $resultado_talleres = $conn->query($sql_talleres);

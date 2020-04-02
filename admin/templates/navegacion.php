@@ -35,7 +35,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard </a></li>
+            <li><a href="dashboard.php"><i class="fa fa-circle-o"></i> Dashboard </a></li>
             <!-- <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li> -->
           </ul>
         </li>
