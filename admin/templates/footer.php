@@ -35,6 +35,9 @@
 <script src="js/fontawesome-iconpicker.min.js"></script>
 <!-- iCheck 1.0.1 -->
 <script src="js/icheck.min.js"></script>
+<!-- Morris.js charts -->
+<script src="js/raphael.min.js"></script>
+<script src="js/morris.min.js"></script>
 <!-- Scripts propio -->
 <script src="../js/cotizador.js"></script>
 <script src="js/app.js"></script>

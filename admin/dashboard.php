@@ -21,6 +21,15 @@ include_once 'funciones/funciones.php';
     <!-- Main content -->
     <section class="content">
     <div class="row">
+      <div class="col-lg-12">
+      <div class="box-body chart-responsive">
+          <div class="chart" id="line-chart" style="height: 300px;"></div>
+        </div>
+      </div>
+        
+    </div>
+    <h2 class="page-header">Resumen de registros</h2>
+    <div class="row">
         <div class="col-lg-3 col-xs-6">
           <?php
             $sql = "SELECT COUNT(id_registrado) AS registros FROM registrados";
