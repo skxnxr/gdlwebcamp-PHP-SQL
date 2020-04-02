@@ -1,0 +1,3 @@
+INNODB
+Cotejamiento utf8_general_ci
+Cotejamiento de la conexión al servidor: utf8mb4_unicode_ci

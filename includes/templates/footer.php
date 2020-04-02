@@ -5,12 +5,10 @@
           <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie. Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex blandit vehicula. Morbi porttitor tempus euismod.</p>
         </div>
         <div class="ultimos-tweets">
-          <h3>Ultimos <span>tweets</span></h3>
-          <ul>
-            <li>Integer ultricies #justo nec ipsum finibus, eu interdum quam vulputate. Pellentesque nec justo non est eleifend pulvinar.</li>
-            <li>Integer ultricies #justo nec ipsum finibus, eu interdum quam vulputate. Pellentesque nec justo non est eleifend pulvinar.</li>
-            <li>Integer ultricies #justo nec ipsum finibus, eu interdum quam vulputate. Pellentesque nec justo non est eleifend pulvinar.</li>
-          </ul>
+          <h3>Instagram <span>Posts</span></h3>
+          <div class="">
+          <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/cbc8e3ef30685c07a9bc02a93dffdb77.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:280px;border:0;overflow:hidden;"></iframe>
+          </div>
         </div>
         <div class="menu">
           <h3>Redes <span>Sociales</span></h3>
@@ -23,7 +21,7 @@
           </nav>
         </div>
       </div>
-      <p class="copyright">Todos los derechos reservados GDLWEBCAMP 2020 &copy</p>
+      <p class="copyright"><a href="/gdlwebcamp/admin/dashboard.php">Todos los derechos reservados GDLWEBCAMP 2020 &copy </a></p>
     </footer> 
 
       <!-- Begin Mailchimp Signup Form -->
