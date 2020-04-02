@@ -247,7 +247,7 @@ include_once 'templates/navegacion.php';
                         <div id="suma-total">
                                 
                         </div>
-                        <input type="hidden" name="total_pedido" id="total_pedido">
+                        
                         
                     </div><!--.Total-->
                 </div> <!--.Caja-->
@@ -257,6 +257,7 @@ include_once 'templates/navegacion.php';
               
 
               <div class="box-footer">
+                <input type="hidden" name="total_pedido" id="total_pedido">
                 <input type="hidden" name="registro" value="actualizar">
                 <input type="hidden" name="id_registro" value="<?php echo $registrado['id_registrado']; ?>">
                 <input type="hidden" name="fecha_registro" value="<?php echo $registrado['fecha_registro']; ?>">
