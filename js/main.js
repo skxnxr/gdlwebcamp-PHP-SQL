@@ -7,13 +7,13 @@
        //var map = L.map('mapa').setView([10.496262, -66.848937], 16);
        var map = L.map('mapa', {
         center:[10.496262, -66.848937],
+        tap: false,
         // minZoom:16,
         // maxZoom: 16,
         scrollWheelZoom: false,
         //dragging: false,
-        //touchZoom: 'center',
-        touchZoom: false,
-        tap: false,
+        touchZoom: 'center',
+        dragging: false,
         zoom: 16
     });
 

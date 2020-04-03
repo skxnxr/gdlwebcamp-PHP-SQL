@@ -9,7 +9,7 @@
         <?php 
         try {
             require_once('includes/funciones/bd_conexion.php');
-            $sql = "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+            $sql = "SELECT evento_id, nombre_evento, fecha_evento, DATE_FORMAT(hora_evento, '%h:%s %p') AS hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
             $sql .= " FROM eventos ";
             $sql .= " INNER JOIN categoria_evento ";
             $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";

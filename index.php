@@ -43,7 +43,7 @@
             <?php 
               try {
                   require_once('includes/funciones/bd_conexion.php');
-                  $sql = "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+                  $sql = "SELECT evento_id, nombre_evento, fecha_evento, DATE_FORMAT(hora_evento, '%h:%s %p') AS hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
                   $sql .= " FROM eventos ";
                   $sql .= " INNER JOIN categoria_evento ";
                   $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
@@ -51,7 +51,7 @@
                   $sql .= " ON eventos.id_inv = invitados.invitado_id "; 
                   $sql .= "AND eventos.id_cat_evento = 1";
                   $sql .= " ORDER BY evento_id LIMIT 2;";
-                  $sql .= "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+                  $sql .= "SELECT evento_id, nombre_evento, fecha_evento, DATE_FORMAT(hora_evento, '%h:%s %p') AS hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
                   $sql .= " FROM eventos ";
                   $sql .= " INNER JOIN categoria_evento ";
                   $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
@@ -59,7 +59,7 @@
                   $sql .= " ON eventos.id_inv = invitados.invitado_id "; 
                   $sql .= "AND eventos.id_cat_evento = 2";
                   $sql .= " ORDER BY evento_id LIMIT 2;";
-                  $sql .= "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+                  $sql .= "SELECT evento_id, nombre_evento, fecha_evento, DATE_FORMAT(hora_evento, '%h:%s %p') AS hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
                   $sql .= " FROM eventos ";
                   $sql .= " INNER JOIN categoria_evento ";
                   $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
@@ -87,9 +87,9 @@
                 <?php } ?>
                     <div class="detalle-evento">
                       <?php
-                      //  echo "<pre>";
+                        //echo "<pre>";
                       // var_dump($evento);
-                      //  echo "</pre>";
+                       // echo "</pre>";
                       ?>
                       <h3><?php echo utf8_encode(utf8_decode($evento['nombre_evento'])); ?></h3>
                       <p><i class="fa fa-clock" aria-hidden="true"></i>
@@ -98,6 +98,7 @@
                           // $hora = $evento['hora_evento']; 
                           // $hora_formateada = strftime("%H", srtotime($hora));
                           // echo $hora_formateada;
+                          //echo str_replace(":00", " ", $evento['hora_evento']) ;
                           echo $evento['hora_evento']; 
                         ?>
                       </p>
