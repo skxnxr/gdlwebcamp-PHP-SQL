@@ -3,10 +3,12 @@
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <title></title>
+<meta name="theme-color" content="#fe4918">
+<meta name="apple-mobile-web-app-status-bar-style" content="#fe4918">
+<title>GDLWEBCAMP</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -41,11 +43,11 @@
       <div class="hero">
         <div class="contenido-header">
           <nav class="redes-sociales">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
           </nav>
           <div class="informacion-evento">
             <div class="clearfix">

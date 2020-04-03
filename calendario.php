@@ -52,10 +52,10 @@
                         </h3>
                         <?php foreach($lista_eventos as $evento){?>
                             <div class="dia">
-                                <p class = "titulo"> <?php echo utf8_encode($evento['titulo']); ?> </p>
+                                <p class = "titulo"> <?php echo utf8_encode(utf8_decode($evento['titulo'])); ?> </p>
                                 <p class = "hora"> 
                                     <i class="fa fa-clock" aria-hidden="true"></i>
-                                    <?php echo $evento['fecha'] . " " . $evento['hora']; ?>
+                                    <?php  echo utf8_encode(strftime("%A, %d de %B", strtotime( $evento['fecha']) )) . " " . $evento['hora']; ?>
                                 </p>
                                 <p>
                                     <i class="<?php echo $evento['icono']; ?>" aria-hidden="true"></i>

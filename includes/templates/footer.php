@@ -2,7 +2,7 @@
       <div class="contenedor clearfix">
         <div class="footer-informacion">
           <h3>Sobre <span>Gdlwebcamp</span></h3>
-          <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie. Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex blandit vehicula. Morbi porttitor tempus euismod.</p>
+          <p>Creada en 2018 en Caracas, Venezuela. Algunos de sus objetivos son promover el desarrollo y mejoramiento de la ciencia, tecnología e innovación, y aquellas relacionadas con el avance de la sociedad de la información y del conocimiento.</p>
         </div>
         <div class="ultimos-tweets">
           <h3>Instagram <span>Posts</span></h3>
@@ -13,11 +13,11 @@
         <div class="menu">
           <h3>Redes <span>Sociales</span></h3>
           <nav class="redes-sociales">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
           </nav>
         </div>
       </div>

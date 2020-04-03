@@ -2,7 +2,7 @@
 
     <section class="section contenedor">
       <h2>La mejor conferencia de diseño web en español</h2>
-      <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie. Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex blandit vehicula. Morbi porttitor tempus euismod.</p> 
+      <p>GDLWebCamp 2020 espera a más de 60000 asistentes internacionales. Aproveche su experiencia al máximo, reservando su cupo por tres días, este el lugar de reunión mundial para todos los que prosperan en el negocio de las tecnologías de la información.</p> 
     </section><!--seccion-->
 
     

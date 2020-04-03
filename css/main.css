@@ -647,6 +647,7 @@ div.tabla-precio p.numero{
 
 /** Mapa **/
 div.mapa {
+  z-index: 1;
   height: 420px;
   /* background-color: green; */
 }
@@ -800,8 +801,12 @@ p.copyright a {
 }
 /** Internas **/
 /* Conferencia */
+.galeria{
+text-align: center;
+}
 .galeria a {
   display: inline-block;
+
   margin-bottom: 5px;
 }
 .navegacion-principal .activo{
@@ -983,8 +988,12 @@ div.cboxElement{
 .error{
   background-color: red;
 }
+.footer-informacion p {
+  font-size: 15px;
+  text-align: justify;
+}
 
-
+ 
 
 
 

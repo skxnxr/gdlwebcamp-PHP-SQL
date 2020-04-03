@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#3c8dbc">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3c8dbc">
   <title>Área de administración GDLWEBCAMP</title>
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->

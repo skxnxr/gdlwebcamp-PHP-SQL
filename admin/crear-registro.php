@@ -163,7 +163,7 @@ include_once 'templates/navegacion.php';
                                             <input type="checkbox" class="flat-green" name="registro_evento[]" id="<?php echo $evento['id']; ?>" value="<?php echo $evento['id']; ?>">
                                             <time>
                                                 <?php  
-                                                $hora = $evento['hora']; 
+                                                  $hora = $evento['hora']; 
                                                 $hora_formato = date('h:i a', strtotime($hora));
                                                 echo $hora_formato;
                                                 ?>
