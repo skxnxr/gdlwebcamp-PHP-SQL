@@ -31,6 +31,8 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="css/admin.css">
+  <!-- <link rel="stylesheet" href="../css/main.css"> -->
+  <!-- <link rel="stylesheet" href="../css/all.min.css"> -->
   <link rel="stylesheet" href="css/sweetalert2.min.css">
   <!-- <link rel="stylesheet" href="css/dataTables.bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/fontawesome-iconpicker.min.css">

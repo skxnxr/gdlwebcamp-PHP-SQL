@@ -55,7 +55,7 @@ include_once 'templates/navegacion.php';
                  <ul class="lista-precios clearfix row">
                     <li class="col-md-4">
                       <div class="tabla-precio text-center">
-                        <h3>Pase por día <br> (Viernes)</h3>
+                        <h3 clase="naranja">Pase por día <br> (Viernes)</h3>
                         <p class="numero">$30</p>
                         <ul>
                           <li>Bocadillos gratis</li>
