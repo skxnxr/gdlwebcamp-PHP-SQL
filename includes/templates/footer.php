@@ -88,7 +88,6 @@
       <script src="js/jquery.colorbox-min.js" type="text/javascript"></script>';
     }
   ?>
-
   <!-- Script newsletter Mailchimp -->
   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"f57f5a2ac3e4ea43fcafa2542","lid":"cdd4300840","uniqueMethods":true}) })</script>
 
