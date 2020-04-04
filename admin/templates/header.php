@@ -32,8 +32,9 @@
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="css/admin.css">
   <link rel="stylesheet" href="css/sweetalert2.min.css">
-  <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/dataTables.bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/fontawesome-iconpicker.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/r-2.2.3/rr-1.2.6/datatables.min.css"/>
 
   
 

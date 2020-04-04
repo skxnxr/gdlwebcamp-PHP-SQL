@@ -13,7 +13,7 @@ include_once 'templates/navegacion.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Listado de personas registradas
+        Listado de registrados
         <!-- <small>it all starts here</small> -->
       </h1>
     </section>
@@ -25,7 +25,7 @@ include_once 'templates/navegacion.php';
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Maneja los visitantes registrados</h3>
+              <h3 class="box-title">Maneja en esta sección los visitantes registrados</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

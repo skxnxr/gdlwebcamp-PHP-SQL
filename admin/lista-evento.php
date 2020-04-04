@@ -25,11 +25,11 @@ include_once 'templates/navegacion.php';
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Aquí podrás editar o borrar los eventos</h3>
+              <h3 class="box-title">En esta sección puedes visualizar, editar o borrar los eventos</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="registros" class="table table-bordered table-striped">
+              <table id="registros" class="table table-bordered table-striped ">
                 <thead>
                 <tr>
                   <th>Nombre</th>
@@ -43,7 +43,7 @@ include_once 'templates/navegacion.php';
                 <tbody>
                 <?php
                    try {
-                     $sql = "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, nombre_invitado, apellido_invitado ";
+                     $sql = "SELECT evento_id, nombre_evento, fecha_evento, DATE_FORMAT(hora_evento, '%h:%s %p') AS hora_evento, cat_evento, nombre_invitado, apellido_invitado ";
                      $sql .= " FROM eventos ";
                      $sql .= " INNER JOIN categoria_evento ";
                      $sql .= " ON eventos.id_cat_evento=categoria_evento.id_categoria ";
@@ -59,7 +59,9 @@ include_once 'templates/navegacion.php';
                    while ($eventos = $resultado->fetch_assoc()) { ?>
                     <tr>
                      <td><?php echo $eventos['nombre_evento']; ?></td>
-                     <td><?php echo $eventos['fecha_evento']; ?></td>
+                     <td><?php setlocale(LC_TIME, 'es_ES.UTF-8');
+                            setlocale(LC_TIME, 'spanish');
+                            echo utf8_encode(strftime("%A, %d de %B del %Y", strtotime($eventos['fecha_evento']) )); ?></td>
                      <td><?php echo $eventos['hora_evento']; ?></td>
                      <td><?php echo $eventos['cat_evento']; ?></td>
                      <td><?php echo $eventos['nombre_invitado'] . "" . $eventos['apellido.invitado']; ?> </td>

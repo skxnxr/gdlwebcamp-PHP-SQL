@@ -9,8 +9,8 @@
         </div> -->
         <div class=" info">
         <!-- <div class="pull-left info"> -->
-          <p>Admin: <?php echo $_SESSION['usuario']; ?></p>
-          <a href="#"><i class="fa fa-circle text-success"></i>Nivel: Administrador</a>
+          <p>Admin: <span><?php echo $_SESSION['usuario']; ?></span></p>
+          <a href=""><i class="fa fa-circle text-success"></i>Nivel: Administrador</a>
         </div>
       </div>
       <!-- search form -->
@@ -20,24 +20,20 @@
           <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
-              </span>
+          </span>
         </div>
-      </form>
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
+      </form> 
+      <!-- /.search form
+         sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menú de administración</li>
-        <li class="treeview">
-          <a href="#">
+        <li class="nav-link">
+          <a href="dashboard.php">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
+            <!-- <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            </span> -->
           </a>
-          <ul class="treeview-menu">
-            <li><a href="dashboard.php"><i class="fa fa-circle-o"></i> Dashboard </a></li>
-            <!-- <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li> -->
-          </ul>
         </li>
 
         <li class="treeview">
@@ -100,10 +96,10 @@
           </ul>
         </li>
         <?php endif; ?>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-comments" aria-hidden="true"></i>
-            <span>Testimoniales</span>
+        <li class="nav-link">
+          <a href="login.php?cerrar_sesion=true">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>Cerrar Sesión</span>
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul"></i>Ver todos</a></li>

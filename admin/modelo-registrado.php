@@ -18,7 +18,7 @@ $regalo = $_POST['regalo'];
 $eventos = $_POST['registro_evento'];
 $registro_eventos = eventos_json($eventos);
 
-$fecha_registro = $_POST['fecha_registro'];
+//$fecha_registro = $_POST['fecha_registro'];
 $id_registro = $_POST['id_registro'];
 
 if ($_POST['registro'] == 'nuevo') {
@@ -26,8 +26,9 @@ if ($_POST['registro'] == 'nuevo') {
     //die(json_encode($_POST));
 
     try {
-        $stmt = $conn->prepare("UPDATE registrados SET nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado, pagado) VALUES (?, ?, ?, NOW(), ?, ?, ?, ?, 1 )");
+        $stmt = $conn->prepare("INSERT INTO registrados (nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado, pagado) VALUES (?, ?, ?, NOW(), ?, ?, ?, ?, 1 )");
         $stmt->bind_param("sssssis", $nombre, $apellido, $email, $pedido, $registro_eventos, $regalo, $total);
+        
         $stmt->execute();
         $id_insertado = $stmt->insert_id;
         if($stmt->affected_rows > 0){
@@ -40,6 +41,7 @@ if ($_POST['registro'] == 'nuevo') {
                 'respuesta' => 'error',
                 'error' => mysqli_error($conn)
             );
+            
         }
         $stmt->close();
         $conn->close();
@@ -55,8 +57,8 @@ if ($_POST['registro'] == 'actualizar') {
     //die(json_encode($_POST));
 
     try {
-        $stmt = $conn->prepare('UPDATE registrados SET nombre_registrado = ?, apellido_registrado = ?, email_registrado = ?, fecha_registro = ?, pases_articulos = ?, talleres_registrados =  ?, regalo = ?,  total_pagado = ?, pagado = 1  WHERE id_registrado = ? ');
-        $stmt->bind_param('ssssssisi', $nombre, $apellido, $email, $fecha_registro, $pedido, $registro_eventos, $regalo, $total, $id_registro );
+        $stmt = $conn->prepare('UPDATE registrados SET nombre_registrado = ?, apellido_registrado = ?, email_registrado = ?, fecha_registro = NOW(), pases_articulos = ?, talleres_registrados =  ?, regalo = ?,  total_pagado = ?, pagado = 1  WHERE id_registrado = ? ');
+        $stmt->bind_param('sssssisi', $nombre, $apellido, $email, $pedido, $registro_eventos, $regalo, $total, $id_registro );
         $stmt->execute();
        if ($stmt->affected_rows > 0) {
            $respuesta = array (

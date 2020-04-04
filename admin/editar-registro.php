@@ -37,6 +37,7 @@ include_once 'templates/navegacion.php';
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">Editar registro de usuario manual  </h3>
+          
         </div>
         <div class="box-body">
 

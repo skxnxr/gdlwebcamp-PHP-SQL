@@ -1,9 +1,8 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.18
+      <b>Version</b> 4.1
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2018-2020 <a href="https://adminlte.io">GDLWebCamp</a>.</strong> Todos los derechos reservados.
   </footer>
 
   </div>
@@ -42,6 +41,19 @@
 <script src="../js/cotizador.js"></script>
 <script src="js/app.js"></script>
 <script src="js/login-ajax.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/r-2.2.3/rr-1.2.6/datatables.min.js"></script>
+
+<!-- Script para selecionar las hojas de estilo dependiendo de la pagina  -->
+<?php 
+    $archivo = basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php", "", $archivo);
+    
+    if ($pagina === 'dashboard') {
+      echo '<script src="js/morris-app.js"></script>';
+    }
+ ?>
+
+
 
 </body>
 </html>

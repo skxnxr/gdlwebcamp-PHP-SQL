@@ -13,7 +13,7 @@ include_once 'templates/navegacion.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Crea nuevos registros aquí        
+        Crear un nuevo registro de forma manual
         <small>Recuerda llenar todos los campos</small>
       </h1>
     </section>

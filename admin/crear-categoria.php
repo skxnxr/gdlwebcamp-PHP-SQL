@@ -28,7 +28,7 @@ include_once 'templates/navegacion.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Llena el formulario parar una categoría</h3>
+          <h3 class="box-title">Llena el formulario parar crear una categoría</h3>
         </div>
         <div class="box-body">
             <!-- form start -->

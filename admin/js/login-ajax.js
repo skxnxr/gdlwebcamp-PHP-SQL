@@ -26,7 +26,7 @@ $('#login-admin').on('submit', function(e) {
                       toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                     ,onClose: () => {
-                        window.location.href = './admin.php';
+                        window.location.href = './dashboard.php';
                    }
                   })
                   Toast.fire({

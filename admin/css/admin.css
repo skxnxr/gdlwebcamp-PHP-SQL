@@ -42,3 +42,13 @@ ul.lista-precios li.numero{
     color: #fe4918;
     font-weight: bold;
 }
+.espacio{
+    margin: 1px;
+}
+.espacioBarra{
+    padding: 10px;
+    text-align: center;
+}
+.info p span{
+    text-transform: capitalize;
+}

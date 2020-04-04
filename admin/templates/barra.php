@@ -23,36 +23,19 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
 
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- <img src="dist/img/user2-160x160.png" class="user-image" alt="User Image"> -->
-              <span class="hidden-xs">Hola: <?php echo $_SESSION['nombre']; ?></span>
+          <li class="nav-item ">
+            <a id="dropdownSubMenu1" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Hola: <?php echo " " . $_SESSION['nombre']; ?> 
+              <span class="pull-right-container espacio">
+              <i class="fa fa-gears fa-2x pull-right"></i>
+            </span>
             </a>
-            <ul class="dropdown-menu">
-              <!-- Imagen de usuario  -->
-              <!-- <li class="user-header">
-                <img src="dist/img/user2-160x160.png" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li> -->
-
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="editar-admin.php?id=<?php echo $_SESSION['id']; ?>" class="btn btn-success btn-flat">Ajustes</a>
-                </div>
-                <div class="pull-right">
-                  <a href="login.php?cerrar_sesion=true" class="btn btn-success btn-flat">Cerrar sesión</a>
-                </div>
-              </li>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li class="espacioBarra"><a href="editar-admin.php?id=<?php echo $_SESSION['id']; ?>" class="dropdown-item">Ajustes de su cuenta </a></li>
+              <li class="espacioBarra"><a href="login.php?cerrar_sesion=true" class="dropdown-item">Cerrar sesión</a></li>
             </ul>
           </li>
-
         </ul>
+
       </div>
     </nav>
   </header>

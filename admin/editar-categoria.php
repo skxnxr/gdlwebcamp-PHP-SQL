@@ -19,7 +19,7 @@ include_once 'templates/navegacion.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Editar categorías de eventos
+        Editar Categoría
         <small>Recuerda llenar todos los campos</small>
       </h1>
     </section>
@@ -34,7 +34,7 @@ include_once 'templates/navegacion.php';
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Llena el formulario editar parar una categoría</h3>
+          <h3 class="box-title">Editar Categoría</h3>
         </div>
         <div class="box-body">
         <?php

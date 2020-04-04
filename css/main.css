@@ -295,7 +295,7 @@ p.slogan span{
   font-weight: bold;
 }
 h1.nombre-sitio{
-  font-size: 5.9vw;
+  font-size: 10vw;
   text-transform: uppercase;
   font-family: 'PT Sans', sans-serif;
   
@@ -910,6 +910,19 @@ div.resumen div.total {
   width: 50%;
   padding: 30px;
 }
+@media only screen and (max-width: 768px) {
+  div.resumen div.extras{
+    float: left;
+    width: 99%;
+    padding: 30px;
+  }
+  div.resumen div.total {
+    float: left;
+    width: 99%;
+    padding: 30px;
+  }
+ }
+
 div.resumen input{
   display: block;
   margin: 10px auto;

@@ -3,7 +3,7 @@ $(document).ready(function(){
         e.preventDefault();
 
         var datos = $(this).serializeArray();
-        //console.log(datos);
+        console.log(datos);
 
         $.ajax({
             type: $(this).attr('method'),
@@ -30,13 +30,13 @@ $(document).ready(function(){
                       })
                       Toast.fire({
                         icon: 'success',
-                        title: 'Administrador guardado correctamente'
+                        title: 'Guardado correctamente'
                       })       
                 }else{
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
-                        text: 'Usuario ya registrado'
+                        text: 'Error'
                         // footer: '<a href>Why do I have this issue?</a>'
                       })
                 };
@@ -44,6 +44,7 @@ $(document).ready(function(){
         })
 
     });
+
 
     //Se ejecuta cuando hay un archivo
     $('#guardar-registro-archivo').on('submit', function(e) {
@@ -80,7 +81,7 @@ $(document).ready(function(){
                       })
                       Toast.fire({
                         icon: 'success',
-                        title: 'Administrador guardado correctamente'
+                        title: 'Guardado correctamente'
                       })       
                 }else{
                     Swal.fire({
@@ -101,7 +102,7 @@ $(document).ready(function(){
         e.preventDefault();        
         var id = $(this).attr('data-id');
         var tipo = $(this).attr('data-tipo');
-        //console.log("ID: " + id);
+        console.log("ID: " + id);
         Swal.fire({
             title: '¿Estás seguro?',
             text: "Un registro eliminado no se puede recuperar",
@@ -143,6 +144,7 @@ $(document).ready(function(){
          })      
     })
 
+    
     
 
 });
